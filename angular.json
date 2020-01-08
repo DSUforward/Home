@@ -118,8 +118,29 @@
               "devServerTarget": "home-page:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "base-href": "https://DSUforward.github.io/Home",
+            "outputPath": "dist/home-page",
+            "index": "Home/index.html",
+            "main": "Home/main.ts",
+            "polyfills": "Home/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "Home/favicon.ico",
+              "Home/assets"
+            ],
+            "styles": [
+              "Home/styles.css"
+            ],
+            "scripts": []
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "home-page"
 }
